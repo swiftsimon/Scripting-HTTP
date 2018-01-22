@@ -1,5 +1,4 @@
 var https = require('https');
-
 // make your function modular
 module.exports = function getHTML (options, callback) {
   https.get(options, function(response) {
@@ -13,6 +12,7 @@ module.exports = function getHTML (options, callback) {
   });
   response.on('end', function() {
     console.log('Stream complete', responseData);
+    callback(responseData);
   })
 
  })

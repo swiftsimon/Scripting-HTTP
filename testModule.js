@@ -14,3 +14,4 @@ function printHTML (html) {
 
 
 getHTML(requestOptions, printHTML);
+getHTML(requestOptions, printUpperCase);
